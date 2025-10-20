@@ -1,0 +1,115 @@
+/* ====== Базові стилі ====== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    color: #222;
+}
+
+/* Контейнер */
+.container {
+    width: 80%;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Заголовок */
+#main-title {
+    text-align: center;
+    color: #2a4d9b;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Комбінатор — заголовок у section */
+section h2 {
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* Атрибутний селектор */
+a[target="_blank"] {
+    color: #1e90ff;
+    text-decoration: none;
+}
+a[target="_blank"]:hover {
+    text-decoration: underline;
+}
+
+/* Селектор потомків */
+ul li {
+    margin: 5px 0;
+}
+
+/* Комбінатор + — абзац після заголовка */
+h2 + p {
+    font-style: italic;
+}
+
+/* ====== Форма ====== */
+form {
+    background: #eef3ff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+    width: 100%;
+    margin: 5px 0 10px 0;
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+input:focus, 
+textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 8px rgba(74,144,226,0.5);
+}
+
+/* Кнопка */
+button {
+    background-color: #2a4d9b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1e3a78;
+}
+
+/* Псевдоклас для посилань */
+a:hover {
+    color: #ff6600;
+}
+
+/* Псевдоелемент — після footer */
+footer::after {
+    content: " 2025";
+    color: #555;
+}
+
+/* Тінь і фон для картинок */
+img {
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Атрибутний селектор + псевдоклас */
+img[alt~="Logo"]:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}

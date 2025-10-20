@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Блогова стаття – Основи CSS</title>
+
+    <!-- Зовнішній CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Вбудований стиль -->
+    <style>
+        h2::first-letter {
+            color: #e63946;
+            font-size: 150%;
+        }
+
+        p:hover {
+            background-color: #f0f8ff;
+        }
+
+        footer::before {
+            content: "© ";
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 id="main-title" style="letter-spacing: 1px;">Основи CSS: Селектори, стилі та магія оформлення</h1>
+        </header>
+
+        <main>
+            <section>
+                <h2>Що таке CSS?</h2>
+                <p>CSS (Cascading Style Sheets) — це мова, яка дозволяє оформлювати вигляд HTML-документів. Вона контролює кольори, шрифти, відступи, розміщення елементів і навіть анімації.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS Logo" width="150" style="display:block; margin:10px auto;">
+            </section>
+
+            <section>
+                <h2>Типи підключення CSS</h2>
+                <ul>
+                    <li>Зовнішній файл — <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></li>
+                    <li>Вбудований — у межах тегу <code>&lt;style&gt;</code></li>
+                    <li>Inline — безпосередньо в атрибуті <code>style</code></li>
+                </ul>
+                <p>Комбінуючи різні способи підключення, можна досягти найкращого контролю над виглядом сторінки.</p>
+            </section>
+
+            <section>
+                <h2>Практичний приклад</h2>
+                <p>Нижче наведена форма зворотного зв’язку, стилізована різними способами:</p>
+
+                <form>
+                    <label>Ім’я:</label>
+                    <input type="text" placeholder="Введіть ім’я" required>
+
+                    <label>Email:</label>
+                    <input type="email" placeholder="example@gmail.com" required>
+
+                    <label>Повідомлення:</label>
+                    <textarea rows="4" placeholder="Напишіть щось..."></textarea>
+
+                    <button type="submit">Надіслати</button>
+                </form>
+            </section>
+
+            <section>
+                <h2>Корисні ресурси</h2>
+                <p>Детальніше про CSS можна дізнатися на сайті 
+                    <a href="https://developer.mozilla.org/uk/docs/Web/CSS" target="_blank">MDN Web Docs</a>.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>Лабораторна робота №4. Автор: Боричок Назар</p>
+        </footer>
+    </div>
+</body>
+</html>

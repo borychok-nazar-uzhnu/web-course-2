@@ -1,0 +1,80 @@
+/* styles.css */
+
+/* Уніфікація margin і padding для всіх елементів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основний фон для сторінки */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    padding: 20px;
+}
+
+/* Стилізація картки профілю */
+.profile-card {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Стилізація фото профілю */
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Стилізація заголовка */
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Стилізація опису */
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Стилізація заголовка таблиці */
+h2 {
+    margin-top: 40px;
+    font-size: 22px;
+    text-align: center;
+}
+
+/* Стилізація таблиці */
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.grades-table th, .grades-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.grades-table th {
+    background: linear-gradient(180deg, #ffcc00, #ff6600);
+    color: white;
+}
+
+.grades-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.grades-table tr:hover {
+    background-color: #f1f1f1;
+}

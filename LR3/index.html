@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Персональна сторінка – Боричок Назар</title>
+</head>
+<body>
+    <header>
+        <h1>Персональна сторінка Боричка Назара</h1>
+        <p>Студент спеціальності «Кібербезпека»</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Біографія</h2>
+            <article>
+                <p>Мене звати <strong>Боричок Назар</strong>. Я навчаюся на спеціальності <em>«Кібербезпека»</em> в Ужгородському національному університеті.  
+                Цікавлюся технологіями, інформаційною безпекою та спортом. Моя мета — стати фахівцем у сфері кіберзахисту.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Мої хобі</h2>
+            <ul>
+                <li>Спорт (біг, тренажерний зал)</li>
+                <li>ІТ та кібербезпека</li>
+                <li>Подорожі</li>
+                <li>Музика</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Розклад занять</h2>
+            <table border="1" cellspacing="0" cellpadding="5">
+                <tr>
+                    <th>День</th>
+                    <th>Предмет</th>
+                    <th>Час</th>
+                </tr>
+                <tr>
+                    <td>Понеділок</td>
+                    <td>Основи кібербезпеки</td>
+                    <td>09:00 – 10:20</td>
+                </tr>
+                <tr>
+                    <td>Вівторок</td>
+                    <td>Програмування</td>
+                    <td>10:30 – 11:50</td>
+                </tr>
+                <tr>
+                    <td>Середа</td>
+                    <td>Комп’ютерні мережі</td>
+                    <td>12:00 – 13:20</td>
+                </tr>
+                <tr>
+                    <td>Четвер</td>
+                    <td>Англійська мова</td>
+                    <td>09:00 – 10:20</td>
+                </tr>
+                <tr>
+                    <td>П’ятниця</td>
+                    <td>Математика для ІТ</td>
+                    <td>10:30 – 11:50</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Форма зворотного зв’язку</h2>
+            <form action="#" method="post">
+                <label for="name">Ім’я:</label><br>
+                <input type="text" id="name" name="name" placeholder="Введіть ім’я" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="borychok.nazar@student.uzhnu.edu.ua" required><br><br>
+
+                <label for="login">Логін:</label><br>
+                <input type="text" id="login" name="login" required pattern="[A-Za-z0-9]{4,}" title="Мінімум 4 латинські символи або цифри"><br><br>
+
+                <label for="password">Пароль:</label><br>
+                <input type="password" id="password" name="password" required minlength="6" placeholder="Введіть пароль"><br><br>
+
+                <label>Стать:</label><br>
+                <input type="radio" id="male" name="gender" value="male" checked> <label for="male">Чоловіча</label>
+                <input type="radio" id="female" name="gender" value="female"> <label for="female">Жіноча</label><br><br>
+
+                <label for="hobby">Хобі:</label><br>
+                <select id="hobby" name="hobby">
+                    <option value="sport" selected>Спорт</option>
+                    <option value="it">ІТ</option>
+                    <option value="music">Музика</option>
+                    <option value="travel">Подорожі</option>
+                </select><br><br>
+
+                <label>Додаткові інтереси:</label><br>
+                <input type="checkbox" id="reading" name="interest" value="reading"> <label for="reading">Читання</label>
+                <input type="checkbox" id="gaming" name="interest" value="gaming"> <label for="gaming">Ігри</label><br><br>
+
+                <label for="message">Ваше повідомлення:</label><br>
+                <textarea id="message" name="message" rows="4" cols="30" placeholder="Напишіть коментар або питання..."></textarea><br><br>
+
+                <button type="submit">Надіслати</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Боричок Назар | Email: <a href="mailto:borychok.nazar@student.uzhnu.edu.ua">borychok.nazar@student.uzhnu.edu.ua</a></p>
+    </footer>
+</body>
+</html>
