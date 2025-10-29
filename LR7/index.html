@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"> <!-- Визначення кодування -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптивність на мобільних пристроях -->
+  <title>Аналітика - SaaS Landing</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Підключення зовнішнього CSS -->
+</head>
+<body>
+
+  <header> <!-- Верхня частина сторінки -->
+    <h1>Аналітика</h1> <!-- Заголовок сторінки -->
+    <button id="openModal">Запитати демо</button> <!-- Кнопка для відкриття модального вікна -->
+  </header>
+
+  <nav> <!-- Навігаційне меню -->
+    <ul>
+      <li><a href="#">Головна</a></li>
+      <li><a href="#">Переваги</a></li>
+      <li><a href="#">Тарифи</a></li>
+      <li><a href="#">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <main> <!-- Основний контент -->
+    <section class="advantages"> <!-- Розділ переваг -->
+      <h2>Переваги</h2>
+      <div class="cards">
+        <div class="card">Перевага 1</div>
+        <div class="card">Перевага 2</div>
+        <div class="card">Перевага 3</div>
+      </div>
+    </section>
+
+    <section class="pricing"> <!-- Розділ з тарифами -->
+      <h2>Ціни та Тарифи</h2>
+      <div class="pricing-cards">
+        <div class="pricing-card">Тариф 1</div>
+        <div class="pricing-card">Тариф 2</div>
+        <div class="pricing-card">Тариф 3</div>
+      </div>
+    </section>
+  </main>
+
+  <footer> <!-- Нижня частина сторінки -->
+    <p>© 2025 Аналітика</p>
+  </footer>
+
+  <!-- Модальне вікно -->
+  <dialog id="demoModal"> <!-- Діалогове вікно -->
+    <h3>Запит на демо</h3>
+    <form>
+      <label for="email">Ваш Email:</label>
+      <input type="email" id="email" name="email" required>
+      <button type="submit">Відправити</button>
+      <button type="button" id="closeModal">Закрити</button> <!-- Кнопка закриття -->
+    </form>
+  </dialog>
+
+  <script>
+    const openModalButton = document.getElementById('openModal'); // Отримання кнопки для відкриття модалки
+    const closeModalButton = document.getElementById('closeModal'); // Отримання кнопки для закриття модалки
+    const modal = document.getElementById('demoModal'); // Отримання самого модального вікна
+
+    openModalButton.addEventListener('click', () => {
+      modal.showModal(); // Показ модального вікна
+    });
+
+    closeModalButton.addEventListener('click', () => {
+      modal.close(); // Закриття модального вікна
+    });
+  </script>
+</body>
+</html>

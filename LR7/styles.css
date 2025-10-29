@@ -1,0 +1,112 @@
+/* Загальні налаштування */
+:root {
+  --bg: #f0f4f8; /* Колір фону */
+  --text: #333; /* Колір тексту */
+  --accent: #0099cc; /* Основний акцентний колір */
+  --gap: 16px; /* Відступи */
+  --radius: 8px; /* Закруглені кути */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Уніфікація коробки для всіх елементів */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg); /* Фоновий колір */
+  color: var(--text); /* Колір тексту */
+}
+
+header, footer {
+  background-color: var(--accent); /* Колір фону для header і footer */
+  color: white; /* Білий текст */
+  text-align: center; /* Центрування тексту */
+  padding: 20px; /* Відступи */
+}
+
+nav ul {
+  display: flex; /* Використання Flexbox для навігації */
+  justify-content: space-around; /* Розподіл елементів */
+  background-color: #333; /* Колір фону меню */
+  list-style: none; /* Видалення маркерів */
+  padding: 10px; /* Відступи */
+}
+
+nav a {
+  color: white; /* Білий текст */
+  text-decoration: none; /* Без підкреслення */
+}
+
+main {
+  display: grid; /* Використання CSS Grid для організації сторінки */
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "footer footer"; /* Структура з двома стовпцями */
+  grid-template-columns: 1fr 3fr; /* Пропорції колонок */
+  gap: var(--gap); /* Відступи між елементами */
+  padding: var(--gap); /* Відступи для main */
+}
+
+.advantages, .pricing {
+  margin-bottom: var(--gap); /* Відступи між секціями */
+}
+
+.cards, .pricing-cards {
+  display: flex; /* Використання Flexbox для карток */
+  gap: var(--gap); /* Відступи між картками */
+  flex-wrap: wrap; /* Перенос елементів на новий ряд */
+}
+
+.card, .pricing-card {
+  background-color: #fff; /* Білий фон для карток */
+  border-radius: var(--radius); /* Закруглені кути */
+  padding: 20px; /* Відступи всередині карток */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тінь для карток */
+  flex: 1 1 calc(33% - var(--gap)); /* Розмір карток для трьох в одному ряду */
+  text-align: center; /* Центрування тексту */
+}
+
+button {
+  padding: 10px 20px; /* Відступи для кнопок */
+  background-color: var(--accent); /* Колір фону кнопок */
+  color: white; /* Білий текст */
+  border: none; /* Без обводки */
+  border-radius: var(--radius); /* Закруглені кути */
+  cursor: pointer; /* Курсор у вигляді руки */
+}
+
+button:hover {
+  background-color: #0077b5; /* Зміна кольору при наведенні */
+}
+
+/* Модальне вікно */
+dialog {
+  padding: 20px; /* Відступи для модалки */
+  border: none; /* Без обводки */
+  border-radius: var(--radius); /* Закруглені кути */
+  background-color: #fff; /* Білий фон */
+}
+
+dialog form {
+  display: flex; /* Використання Flexbox для форми */
+  flex-direction: column; /* Вертикальне розташування елементів */
+  gap: var(--gap); /* Відступи між елементами */
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr; /* Одна колонка на мобільних пристроях */
+    grid-template-areas:
+      "header"
+      "main"
+      "footer"; /* Перекомпонування для мобільних */
+  }
+
+  .card, .pricing-card {
+    flex: 1 1 100%; /* Картки займають всю ширину на мобільних */
+  }
+}
