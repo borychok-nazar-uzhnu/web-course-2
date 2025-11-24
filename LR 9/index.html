@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo-список</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="todo-app">
+            <h1>Мій ToDo-список</h1>
+
+            <p id="status-text">
+                Введи завдання в поле нижче та натисни «Додати».
+            </p>
+
+            <form id="todo-form">
+                <label for="todo-input">Нове завдання:</label>
+                <input
+                    type="text"
+                    id="todo-input"
+                    name="todo"
+                    placeholder="Наприклад: підготуватися до лабораторної"
+                    required
+                >
+                <button type="submit" class="btn primary">Додати</button>
+            </form>
+
+            <section class="list-section">
+                <h2>Список завдань</h2>
+                <ul id="todo-list">
+                    <!-- Тут будуть з’являтися завдання -->
+                </ul>
+                <p id="empty-message">Поки що немає жодного завдання.</p>
+            </section>
+
+            <section class="summary">
+                <p>Усього завдань: <span id="total-count">0</span></p>
+                <p>Виконано: <span id="done-count">0</span></p>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

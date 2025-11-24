@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 10px;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+}
+
+.todo-app {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#status-text {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+label {
+    flex-basis: 100%;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+input[type="text"] {
+    flex: 1 1 auto;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.btn {
+    padding: 8px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    transition: transform 0.1s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn.primary {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.btn.secondary {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+.btn.danger {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Секція списку */
+
+.list-section {
+    margin-bottom: 15px;
+}
+
+.list-section h2 {
+    margin-bottom: 8px;
+}
+
+#todo-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 8px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-bottom: 6px;
+    background-color: #fafafa;
+}
+
+.todo-text {
+    flex: 1 1 auto;
+}
+
+/* Стиль виконаного завдання */
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.todo-item.completed {
+    background-color: #e6ffe6;
+    border-color: #8bc34a;
+}
+
+/* Повідомлення про порожній список */
+
+#empty-message {
+    font-size: 13px;
+    color: #777;
+}
+
+/* Підсумок */
+
+.summary {
+    font-size: 14px;
+    border-top: 1px solid #eee;
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary span {
+    font-weight: bold;
+}
