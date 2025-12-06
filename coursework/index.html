@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Каталог студентів університету</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Шрифт з підтримкою кирилиці -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="page">
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="logo">
+            <span class="logo__mark">UNI</span>
+            <span class="logo__text">Каталог студентів</span>
+        </div>
+
+        <nav class="main-nav" aria-label="Головна навігація">
+            <ul class="main-nav__list">
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#about">Про проєкт</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="site-main">
+        <!-- ASIDE -->
+        <aside class="sidebar">
+            <section class="sidebar__section">
+                <h2 class="sidebar__title">Фільтр за групою</h2>
+                <div id="group-filters" class="chip-list">
+                    <!-- Кнопки груп JS додасть сюди -->
+                </div>
+            </section>
+
+            <section class="sidebar__section">
+                <h2 class="sidebar__title">Статистика</h2>
+                <ul class="stats-list">
+                    <li>
+                        <span>Всього студентів:</span>
+                        <strong id="total-count">0</strong>
+                    </li>
+                    <li>
+                        <span>Середній бал по каталогу:</span>
+                        <strong id="avg-gpa">–</strong>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="sidebar__section sidebar__section--muted">
+                <h2 class="sidebar__title">Підказка</h2>
+                <p class="sidebar__text">
+                    Натисни на картку студента, щоб подивитися детальну інформацію:
+                    оцінки, адресу, перелік курсів та викладачів.
+                </p>
+            </section>
+        </aside>
+
+        <!-- CONTENT -->
+        <section class="content" id="catalog" aria-label="Каталог студентів університету">
+            <header class="content__header">
+                <h1>Каталог студентів університету</h1>
+                <p class="content__subtitle">
+                    Дані завантажуються з JSON-файлу та відображаються у вигляді карток.
+                </p>
+            </header>
+
+            <div id="status-message" class="status-message" aria-live="polite"></div>
+
+            <section aria-label="Список студентів">
+                <div id="students-list" class="cards-grid">
+                    <!-- Картки студентів JS створить тут -->
+                </div>
+            </section>
+
+            <section id="about" class="info-block">
+                <h2>Про цей міні-застосунок</h2>
+                <p>
+                    Це навчальний проєкт з веброзробки, який показує роботу з
+                    <strong>HTML5</strong>, <strong>CSS Grid/Flexbox</strong>,
+                    <strong>адаптивною версткою</strong> та
+                    <strong>JavaScript (fetch + DOM)</strong>.
+                </p>
+            </section>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="contacts">
+        <p>© 2025 Університет. Каталог студентів. Курсовий проєкт.</p>
+    </footer>
+</div>
+
+<!-- MODAL -->
+<div id="modal-overlay" class="modal-overlay hidden" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button
+            class="modal__close"
+            type="button"
+            aria-label="Закрити вікно"
+        >
+            &times;
+        </button>
+        <div class="modal__content">
+            <!-- JS заповнить деталі студента -->
+        </div>
+    </div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
